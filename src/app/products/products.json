@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Construction Materials",
+    "img": "https://images.unsplash.com/photo-1519995451813-39e21b0ba48a?auto=format&fit=crop&w=800&q=80",
+    "desc": "Cement, aggregates, bricks, tiles, and more for residential, commercial, and infrastructure projects. Reliable supply, consistent quality, and competitive pricing.",
+    "features": [
+      "All major construction materials",
+      "Sourced from trusted suppliers",
+      "On-time delivery for any scale",
+      "Quality assurance included"
+    ]
+  },
+  {
+    "name": "Steel & Metals",
+    "img": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+    "desc": "Steel bars, coils, sheets, pipes, and specialty metals sourced globally, meeting international standards.",
+    "features": [
+      "Wide range: bars, coils, sheets, pipes",
+      "Meets international standards",
+      "Custom sizes and grades available",
+      "Competitive global pricing"
+    ]
+  },
+  {
+    "name": "Machinery & Equipment",
+    "img": "https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5a?auto=format&fit=crop&w=800&q=80",
+    "desc": "Construction machinery, tools, and heavy equipment including cranes, loaders, mixers, and more.",
+    "features": [
+      "Heavy equipment for all project needs",
+      "Modern, reliable machinery",
+      "Maintenance and support options",
+      "Flexible sourcing by project size"
+    ]
+  },
+  {
+    "name": "Scrap (Metals & Plastics)",
+    "img": "https://images.unsplash.com/photo-1611270418597-a6c77d5bdeed?auto=format&fit=crop&w=800&q=80",
+    "desc": "Global trade of non-ferrous metal scrap (aluminum, copper, etc.) and recyclable plastic scraps. Sustainable, cost-effective sourcing meeting international standards.",
+    "features": [
+      "Non-ferrous metals: aluminum, copper, etc.",
+      "Recyclable plastic scraps",
+      "Supports circular economy",
+      "Cost-effective, sustainable sourcing"
+    ]
+  },
+  {
+    "name": "Custom Sourcing",
+    "img": "https://images.unsplash.com/photo-1579226905180-636b76d96a65?auto=format&fit=crop&w=800&q=80",
+    "desc": "Any material for construction, manufacturing, medicine, FMCG, or specialized needs. Share your specs and preferred origin — we handle the rest.",
+    "features": [
+      "Any material, any industry",
+      "Personalized sourcing process",
+      "Supplier vetting and logistics",
+      "End-to-end quality control"
+    ]
+  }
+] 

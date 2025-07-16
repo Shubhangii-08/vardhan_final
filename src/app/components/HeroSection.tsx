@@ -9,7 +9,7 @@ export default function HeroSection() {
       justifyContent: "center",
       alignItems: "center",
       textAlign: "center",
-      color: "#fff",
+      color: "#394655",
       position: "relative",
       zIndex: 2,
     }}>
@@ -19,6 +19,7 @@ export default function HeroSection() {
         letterSpacing: "0.08em",
         margin: 0,
         textShadow: "0 4px 32px rgba(0,0,0,0.25)",
+        color: "#394655",
       }}>
         FROM PORT TO PORT, YOUR<br />GLOBAL SUPPORT!
       </h1>
@@ -29,6 +30,7 @@ export default function HeroSection() {
         letterSpacing: "0.03em",
         textShadow: "0 2px 8px rgba(0,0,0,0.18)",
         maxWidth: "600px",
+        color: "#394655",
       }}>
         Experience seamless international trade solutions
       </p>

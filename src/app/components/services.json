@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Sourcing & Procurement",
+    "description": "High-quality products at competitive prices.",
+    "img": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
+    "features": [
+      "Global supplier network",
+      "Strict quality control",
+      "Custom sourcing solutions",
+      "Transparent pricing"
+    ]
+  },
+  {
+    "title": "Freight Forwarding",
+    "description": "End-to-end logistics solutions worldwide.",
+    "img": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80",
+    "features": [
+      "Sea, air, and land freight",
+      "Real-time shipment tracking",
+      "Customs documentation assistance",
+      "Door-to-door delivery"
+    ]
+  },
+  {
+    "title": "Customs Clearance",
+    "description": "Hassle-free import/export documentation.",
+    "img": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=400&q=80",
+    "features": [
+      "Expert compliance guidance",
+      "Fast-track clearance",
+      "Tariff and duty optimization",
+      "24/7 support for urgent shipments"
+    ]
+  }
+] 

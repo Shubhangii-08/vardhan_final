@@ -1,8 +1,14 @@
-'use client';
+"use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="w-full bg-[rgba(30,44,61,0.92)] text-white text-center px-2 sm:px-4 pt-10 pb-4 font-medium mt-auto shadow-[0_-2px_8px_rgba(30,44,61,0.04)]">
       <div className="flex flex-col md:flex-row flex-wrap justify-center items-start gap-8 md:gap-12 max-w-6xl mx-auto mb-6 px-2">
@@ -27,15 +33,7 @@ export default function Footer() {
             <a href="/contact" className="text-slate-300 hover:text-blue-300 transition">Contact</a>
           </div>
         </div>
-        {/* Newsletter Signup */}
-        <div className="min-w-[200px] flex-1 text-left">
-          <div className="font-bold mb-2">Subscribe to our Newsletter</div>
-          <form className="flex gap-2 flex-col sm:flex-row items-start sm:items-center mb-2" onSubmit={e => e.preventDefault()}>
-            <input type="email" placeholder="Your email address" className="px-3 py-2 rounded border-none text-base outline-none min-w-[120px] w-full sm:w-auto" />
-            <button type="submit" className="bg-blue-600 text-white rounded px-4 py-2 font-semibold hover:bg-blue-700 transition">Subscribe</button>
-          </form>
-          <div className="text-slate-300 text-sm">Get updates on new products and offers.</div>
-        </div>
+       
         {/* Social Media */}
         <div className="min-w-[120px] flex-1 text-left">
           <div className="font-bold mb-2">Follow Us</div>
@@ -53,7 +51,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-slate-700 pt-4 text-slate-300 flex flex-col md:flex-row flex-wrap justify-center items-center gap-2 md:gap-8 text-sm">
-        <div>&copy; {new Date().getFullYear()} Sourcing Sharks. All rights reserved. | Powered by Sourcing Sharks</div>
+        <div>&copy; {year ? year : ""} Sourcing Sharks. All rights reserved. | Powered by Sourcing Sharks</div>
         <div>
           <a href="/privacy" className="text-slate-300 hover:text-blue-300 mx-2 transition">Privacy Policy</a>
           |
