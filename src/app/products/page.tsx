@@ -1,80 +1,45 @@
-// import Navbar from "../components/Navbar";
-
-// export default function ProductsPage() {
-//   return (
-//     <>
-//       <Navbar />
-//       <main style={{
-//         padding: "6rem 2rem 2rem 2rem",
-//         color: "#fff",
-//         minHeight: "100vh",
-//         background: "repeating-linear-gradient(135deg, #2a5298 0px, #2a5298 40px, #1e3c72 40px, #1e3c72 80px)",
-//         boxSizing: "border-box"
-//       }}>
-//         <h1>Our Products</h1>
-//         <p style={{ maxWidth: 700, fontSize: "1.2rem", margin: "2rem auto" }}>
-//           We offer a wide range of high-quality, original products for the construction industry and beyond. All our products are sourced from trusted suppliers and come with a one-year guarantee.
-//         </p>
-//         <h2>Featured Products</h2>
-//         <ul style={{ maxWidth: 700, margin: "1rem auto 2rem auto", fontSize: "1.1rem" }}>
-//           <li>Premium Cement & Building Materials</li>
-//           <li>Steel & Metal Products</li>
-//           <li>Electrical & Plumbing Supplies</li>
-//           <li>Tiles, Flooring & Finishing Materials</li>
-//           <li>Custom Sourcing Solutions</li>
-//         </ul>
-//         <h2>Why Buy From Us?</h2>
-//         <ul style={{ maxWidth: 700, margin: "1rem auto 2rem auto", fontSize: "1.1rem" }}>
-//           <li>Competitive market prices</li>
-//           <li>International quality standards</li>
-//           <li>Fast, reliable global shipping</li>
-//           <li>Expert support and after-sales service</li>
-//         </ul>
-//       </main>
-//     </>
-//   );
-// } 
-// src/app/products/page.tsx
-
 import Navbar from "../components/Navbar";
+
+const products = [
+  { name: "Cement & Aggregates", img: "/images/cement.jpg" },
+  { name: "Steel & Metals", img: "/images/steel.jpg" },
+  { name: "Machinery & Equipment", img: "/images/machinery.jpg" },
+];
+
 export default function ProductsPage() {
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-center mb-12">Our Products</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-            <img
-              src="/images/cement.jpg"
-              alt="Cement & Aggregates"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold">Cement & Aggregates</h3>
-            </div>
+    <>
+      <Navbar />
+      <main className="pt-20 min-h-screen bg-gradient-to-br from-[#f1f5f9] to-[#e0e7ef]">
+        <section className="text-center px-4 py-12">
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-slate-800">Our Products</h1>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto text-slate-700">
+            We offer a wide range of high-quality, original products for the construction industry and beyond. All our products are sourced from trusted suppliers and come with a one-year guarantee.
+          </p>
+        </section>
+        <section className="max-w-6xl mx-auto px-4 py-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-8 text-center">Featured Products</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
+            {products.map((p) => (
+              <div key={p.name} className="bg-white rounded-xl shadow-md w-full sm:w-80 overflow-hidden text-center mx-auto">
+                <img src={p.img} alt={p.name} className="w-full h-44 object-cover" />
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-slate-800">{p.name}</h3>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-            <img
-              src="/images/steel.jpg"
-              alt="Steel & Metals"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold">Steel & Metals</h3>
-            </div>
-          </div>
-          <div className="rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-            <img
-              src="/images/machinery.jpg"
-              alt="Machinery & Equipment"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold">Machinery & Equipment</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
+        <section className="max-w-3xl mx-auto my-8 bg-white rounded-xl shadow-md px-4 py-8">
+          <h2 className="text-xl md:text-2xl font-bold text-blue-600 mb-4">Why Buy From Us?</h2>
+          <ul className="text-base md:text-lg text-slate-700 pl-5 list-disc">
+            <li className="mb-2">Competitive market prices</li>
+            <li className="mb-2">International quality standards</li>
+            <li className="mb-2">Fast, reliable global shipping</li>
+            <li className="mb-2">Expert support and after-sales service</li>
+          </ul>
+        </section>
+      </main>
+    </>
   );
 }

@@ -27,9 +27,9 @@ function WaterMesh() {
       textureWidth: 1024,
       textureHeight: 1024,
       waterNormals: waterNormals as Texture,
-      sunDirection: new THREE.Vector3(-1, 0.15, -1).normalize(),
-      sunColor: 0xffe6b0,
-      waterColor: 0x0a2342,
+      sunDirection: new THREE.Vector3(-0.3, 0.05, -1).normalize(), // lower and more to the side
+      sunColor: 0x665544, // dimmer sun color
+      waterColor: 0x06182e, // darker water color
       distortionScale: 5.5,
       fog: false,
     });
@@ -63,20 +63,20 @@ export default function WaterBackground() {
         {/* Sky for sunset background */}
         <Sky
           distance={450000}
-          sunPosition={[-10, 2, -10]}
+          sunPosition={[-5, 0.5, -15]} // lower and further to the side
           inclination={0.03}
           azimuth={0.22}
           mieCoefficient={0.01}
           mieDirectionalG={0.9}
-          rayleigh={2}
-          turbidity={10}
+          rayleigh={1} // lower for duskier effect
+          turbidity={4} // much lower for a darker sky
         />
         {/* Lighting */}
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={0.07} /> {/* much lower for a darker scene */}
         <directionalLight
-          position={[-10, 2, -10]}
-          intensity={1.3}
-          color={0xffe6b0}
+          position={[-5, 0.5, -15]} // match sun position
+          intensity={0.15} // much lower for a darker sun
+          color={0x665544} // dimmer sun color
         />
         {/* Water mesh */}
         <WaterMesh />
